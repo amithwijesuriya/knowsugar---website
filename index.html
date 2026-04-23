@@ -95,7 +95,17 @@
     .x{margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,.18);border-radius:10px;color:#d7eee4;padding:7px 11px;cursor:pointer}
     @media (max-width:1080px){.hero-grid,.story{grid-template-columns:1fr}.phone-wrap{justify-self:center;width:min(480px,100%)}.fc-1{left:2%;top:5%}.fc-2{right:2%;top:20%}.fc-3{left:2%;bottom:8%}.cta-panel{flex-direction:column;align-items:flex-start}}
     @media (max-width:860px){.nav{flex-wrap:wrap}.nav-links{order:3;width:100%;margin-left:0;overflow:auto;padding-bottom:2px}.feature-grid,.info-layout,.timeline,.metrics,.hero-bullets{grid-template-columns:1fr}.floating-card{display:none}.footer-grid{flex-direction:column}}
-    @media (max-width:560px){.shell{padding:0 16px}.hero{padding-top:30px}h1{font-size:42px}.btn{width:100%}.hero-copy-actions{flex-direction:column}.nav-cta{width:100%}.nav-cta .btn{flex:1}.brand{font-size:19px}}
+    @media (max-width:560px){
+      .shell{padding:0 16px}
+      .hero{padding-top:30px}
+      h1{font-size:42px}
+      .btn{width:auto;padding:10px 14px;font-size:14px}
+      .hero-copy-actions{flex-direction:row}
+      .nav-cta{width:auto}
+      .nav-cta .btn{flex:none}
+      .brand{font-size:19px}
+      .cta-panel .btn{width:auto}
+    }
   </style>
 </head>
 <body>
@@ -124,9 +134,6 @@
         <div class="eyebrow"><span class="dot"></span> Added sugar, made simple</div>
         <h1>Know your added sugar.<br>Change your habits.</h1>
         <p>knowsugar helps you track added sugar with one clear daily limit, a fast logging flow, a simple progress ring, and insights that show where your sugar is really coming from.</p>
-        <div class="hero-copy-actions">
-          <a class="btn btn-primary" href="#download" onclick="openStore()"> App Store</a>
-        </div>
         <div class="hero-bullets">
           <div class="pill">Track added sugar only — not every calorie.</div>
           <div class="pill">Fast added sugar search API and simple manual logging.</div>
