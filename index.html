@@ -37,6 +37,30 @@
     .btn-primary{background:linear-gradient(135deg,var(--green),var(--green-2));color:#fff;box-shadow:0 10px 28px rgba(24,180,87,.24)}
     .btn-primary:hover{transform:translateY(-1px)}
 
+    .hero-desktop{display:block}
+    .hero-mobile{display:none}
+
+    @media (max-width: 768px){
+      .hero-desktop{display:none}
+      .hero-mobile{display:block;padding:22px 0 18px}
+      .topbar{position:sticky}
+      .nav{padding:12px 0}
+      .nav-links{display:none}
+      .nav-cta{margin-left:auto}
+      .hero-mobile .mobile-wrap{display:grid;gap:18px}
+      .hero-mobile .eyebrow{margin-bottom:12px}
+      .hero-mobile h1{font-size:36px;line-height:1.02;letter-spacing:-.05em;margin:0 0 12px}
+      .hero-mobile p{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 16px}
+      .hero-mobile .mobile-actions{display:flex;gap:10px;flex-wrap:wrap}
+      .hero-mobile .mobile-actions .btn{width:auto;padding:10px 14px;font-size:14px}
+      .hero-mobile .mobile-phone{margin-top:6px;display:flex;justify-content:center}
+      .hero-mobile .phone-frame{width:min(320px, 100%);padding:12px;border-radius:30px}
+      .hero-mobile .screen{border-radius:22px}
+      .hero-mobile .mobile-points{display:grid;gap:10px;margin-top:4px}
+      .hero-mobile .mobile-point{padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:16px;color:#dbece5;font-size:14px;line-height:1.45}
+    }
+
+
     .hero{padding:48px 0 32px}
     .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:#dceee6;font-size:13px;font-weight:600;margin-bottom:18px}
@@ -107,6 +131,10 @@
       .brand{font-size:19px}
       .brand-mark{width:50px;height:50px}
       .cta-panel .btn{width:auto}
+      .cta-panel{padding:22px}
+      .cta-panel h3{font-size:24px}
+      .section{padding:22px 0}
+      .card,.step,.metric{padding:18px}
     }
   </style>
 </head>
@@ -130,27 +158,56 @@
     </div>
   </div>
 
-  <main id="top" class="hero shell">
-    <div class="hero-grid">
-      <div>
-        <div class="eyebrow"><span class="dot"></span> Added sugar, made simple</div>
-        <h1>Know your added sugar.<br>Change your habits.</h1>
-        <p>knowsugar helps you track added sugar with one clear daily limit, a fast logging flow, a simple progress ring, and insights that show where your sugar is really coming from.</p>
-        <div class="hero-bullets">
-          <div class="pill">Track added sugar only — not every calorie.</div>
-          <div class="pill">Fast added sugar search API and simple manual logging.</div>
-          <div class="pill">See your limit, excess, habits, and progress over time.</div>
+  <main id="top" class="shell">
+    <section class="hero hero-desktop">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Added sugar, made simple</div>
+          <h1>Know your added sugar.<br>Change your habits.</h1>
+          <p>knowsugar helps you track added sugar with one clear daily limit, a fast logging flow, a simple progress ring, and insights that show where your sugar is really coming from.</p>
+          <div class="hero-bullets">
+            <div class="pill">Track added sugar only — not every calorie.</div>
+            <div class="pill">Fast added sugar search API and simple manual logging.</div>
+            <div class="pill">See your limit, excess, habits, and progress over time.</div>
+          </div>
         </div>
-      </div>
-      <div class="phone-wrap">
-        <div class="phone-glow"></div>
-<div class="phone-frame">
-          <div class="screen">
-            <img src="hero-app.png" alt="knowsugar app preview" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='app-ui.jpg'}else if(!this.dataset.s){this.dataset.s=1;this.src='app-ui.png'}else{this.src='app-ui.webp'}">
+        <div class="phone-wrap">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="screen">
+              <img src="hero-app.png" alt="knowsugar app preview" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='app-ui.jpg'}else if(!this.dataset.s){this.dataset.s=1;this.src='app-ui.png'}else{this.src='app-ui.webp'}">
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="hero-mobile">
+      <div class="mobile-wrap">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Added sugar, made simple</div>
+          <h1>Know your added sugar.<br>Change your habits.</h1>
+          <p>Track added sugar with one clear daily limit, a simple ring, and fast logging that helps you understand your habits.</p>
+          <div class="mobile-actions">
+            <a class="btn btn-primary" href="#download" onclick="openStore()"> App Store</a>
+          </div>
+        </div>
+
+        <div class="mobile-phone">
+          <div class="phone-frame">
+            <div class="screen">
+              <img src="hero-app.png" alt="knowsugar app preview" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='app-ui.jpg'}else if(!this.dataset.s){this.dataset.s=1;this.src='app-ui.png'}else{this.src='app-ui.webp'}">
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-points">
+          <div class="mobile-point">See <strong>Today, Limit, and Excess</strong> at a glance.</div>
+          <div class="mobile-point">Use the <strong>added sugar search API</strong> or log your own items fast.</div>
+          <div class="mobile-point">Track <strong>scores, trends, and habits</strong> over time.</div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <section id="features" class="section shell">
