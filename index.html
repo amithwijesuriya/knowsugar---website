@@ -122,6 +122,27 @@
     .science-mini strong{display:block;color:var(--text);font-size:16px;margin-bottom:6px}
     .science-mini span{display:block;color:var(--muted);line-height:1.55;font-size:14px}
 
+
+    .analysis-panel{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:24px;
+      align-items:center;
+      padding:28px;
+      border-radius:30px;
+      background:linear-gradient(135deg, rgba(167,255,79,.12), rgba(109,181,255,.08));
+      border:1px solid rgba(255,255,255,.13);
+      box-shadow:var(--shadow);
+    }
+    .analysis-panel p{color:var(--muted);line-height:1.7;font-size:16px;margin:0 0 12px}
+    .analysis-points{display:grid;gap:12px;margin-top:16px}
+    .analysis-point{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+    .analysis-badge{width:34px;height:34px;border-radius:12px;background:rgba(167,255,79,.12);border:1px solid rgba(167,255,79,.18);display:grid;place-items:center;color:#a7ff4f;font-weight:900}
+    .analysis-shot{border-radius:28px;padding:12px;background:linear-gradient(165deg, rgba(255,255,255,.12), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 70px rgba(0,0,0,.32)}
+    .analysis-shot img{border-radius:20px;width:100%;height:auto;object-fit:cover}
+    .support-line{margin-top:16px;color:var(--muted);line-height:1.55}
+    .support-line a{color:var(--green);font-weight:800;text-decoration:none}
+
     .cta-panel{padding:28px;border-radius:28px;background:linear-gradient(135deg, rgba(24,180,87,.16), rgba(109,181,255,.10));border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:8px}
     .cta-panel h3{margin:0 0 8px;font-size:30px;letter-spacing:-.04em}
     .cta-panel p{margin:0;color:#d5e9e1;max-width:700px;line-height:1.65}
@@ -155,6 +176,8 @@
       .cta-panel h3{font-size:24px}
       .section{padding:22px 0}
       .card,.step,.metric{padding:18px}
+      .analysis-panel{grid-template-columns:1fr;padding:20px}
+      .analysis-shot{padding:9px}
       .science-grid{grid-template-columns:1fr}
       .science-card{padding:20px}
     }
@@ -171,6 +194,7 @@
         <a href="#features">Features</a>
         <a href="#app-info">App Info</a>
         <a href="#added-sugar-only">Added Sugar</a>
+        <a href="#glp1-analysis">GLP-1 Analysis</a>
         <a href="#how-it-works">How it works</a>
         <a href="#why">Why it matters</a>
         <a href="#support">Support</a>
@@ -359,6 +383,47 @@
         </div>
       </div>
     </article>
+  </section>
+
+
+  <section id="glp1-analysis" class="section shell">
+    <div class="section-head">
+      <div class="kicker">GLP-1 companion analysis</div>
+      <h2>See meal patterns, daily totals, and weekly trends in one view.</h2>
+      <p>The GLP-1 companion view is designed to make added sugar easier to understand meal by meal, while keeping the language educational and focused on awareness.</p>
+    </div>
+
+    <div class="analysis-panel">
+      <div>
+        <h3 style="margin:0 0 12px;font-size:28px;letter-spacing:-.035em">A clearer way to review added sugar patterns.</h3>
+        <p>For GLP-1 users, knowsugar organizes added sugar around two simple guides: a 10g meal guide and a 30g daily guide. The weekly analysis view helps users see which meals stayed within range, which meals went higher, and how the week is trending overall.</p>
+        <p>This is not medical guidance. It is a practical wellness view that helps users notice patterns, compare days, and understand where added sugar is coming from.</p>
+
+        <div class="analysis-points">
+          <div class="analysis-point">
+            <span class="analysis-badge">1</span>
+            <p><strong style="color:var(--text)">Meal-level visibility:</strong> each entry is tracked as M1, M2, M3, and so on, making it easier to review what happened during the day.</p>
+          </div>
+          <div class="analysis-point">
+            <span class="analysis-badge">2</span>
+            <p><strong style="color:var(--text)">Weekly analysis:</strong> stacked columns show daily totals and meal-level patterns, with a 30g daily guide for easy comparison.</p>
+          </div>
+          <div class="analysis-point">
+            <span class="analysis-badge">3</span>
+            <p><strong style="color:var(--text)">Report-ready data:</strong> meal labels, home/outside tags, weekly totals, and top added sugar sources can support clearer habit reports over time.</p>
+          </div>
+        </div>
+
+        <div class="support-line">
+          <strong style="color:var(--text)">For Support:</strong>
+          <a href="mailto:support@knowsugarapp.com">support@knowsugarapp.com</a>
+        </div>
+      </div>
+
+      <div class="analysis-shot">
+        <img src="glp1-analysis-ui.png" alt="knowsugar GLP-1 weekly meal analysis interface showing meal patterns and a 30g daily guide" />
+      </div>
+    </div>
   </section>
 
   <section id="how-it-works" class="section shell">
